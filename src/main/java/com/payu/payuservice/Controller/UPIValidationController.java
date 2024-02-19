@@ -17,6 +17,12 @@ public class UPIValidationController {
     private UPIValidationService upiValidationService;
     @PostMapping("/api/v1/validate")
     public ResponseEntity<Response> validate(@RequestBody UPIRequest upiRequest){
+        return new ResponseEntity<>(upiValidationService.validate(upiRequest),HttpStatus.ACCEPTED);
+
+    }
+
+    @PostMapping("/api/v1/status")
+    public ResponseEntity<Response> status(@RequestBody UPIRequest upiRequest){
 
         return new ResponseEntity<>(upiValidationService.validate(upiRequest),HttpStatus.ACCEPTED);
 

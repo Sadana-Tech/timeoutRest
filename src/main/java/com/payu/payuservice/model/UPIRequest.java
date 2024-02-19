@@ -8,4 +8,5 @@ import java.io.Serializable;
 public class UPIRequest implements Serializable {
 
     private String upiId;
+    private String trnId;
 }

@@ -1,14 +1,13 @@
 package com.payu.payuservice.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class UPIResponse extends Response{
+public class UPIStatus implements Serializable {
 
     private String upiId;
     private String trnId;
-    private boolean isValid;
-
-
+    private boolean status;
 }
